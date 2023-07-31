@@ -162,6 +162,7 @@ public static String encriptarMD5(String txt) throws Exception
     }
 
      private static void obtenerDatos(PreparedStatement pPS, ArrayList<Usuario> pUsuarios) throws Exception {
+         //CD
         try (ResultSet resultSet = ComunDB.obtenerResulSet(pPS);) { // obtener el ResultSet desde la clase ComunDB
             while (resultSet.next()) { // Recorrer cada una de la fila que regresa la consulta  SELECT de la tabla Usuario
                 Usuario usuario = new Usuario();
@@ -176,3 +177,4 @@ public static String encriptarMD5(String txt) throws Exception
     }
 
 }
+//hhh
