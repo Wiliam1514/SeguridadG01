@@ -134,4 +134,3 @@ public class Usuario {
         public static final byte INACTIVO = 2;
     }
 }
-//CD
