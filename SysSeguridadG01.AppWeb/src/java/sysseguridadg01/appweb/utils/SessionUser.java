@@ -39,23 +39,20 @@ public class SessionUser {
         }
         return rol;
     }
+    
     public static void authorize(HttpServletRequest request,
             HttpServletResponse response,
             IAuthorize pIAuthorize) throws ServletException,
-            IOException
-            {
-                if(SessionUser.isAuth(request))
-                {
-                    pIAuthorize.authorize();
-                }
-                else
-                {
-                    response.sendRedirect("Usuario?accion=login");
-                }
-            }
-    public static void cerrarSession (HttpServletRequest request)
-    {
-        HttpSsession = (HttpSession) request.getSession();
+            IOException {
+        if (SessionUser.isAuth(request)) {
+            pIAuthorize.authorize();
+        } else {
+            response.sendRedirect("Usuario?accion=login");
+        }
+    }
+    
+    public static void cerrarSession(HttpServletRequest request) {
+        HttpSession session = request.getSession();
         session.invalidate();
     }
 }

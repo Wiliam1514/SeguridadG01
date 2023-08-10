@@ -1,8 +1,3 @@
-<%-- 
-    Document   : create
-    Created on : 27 jul 2023, 8:55:24
-    Author     : MINEDUCYT
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,6 +7,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <jsp:include page="/Views/Shared/title.jsp" />
         <h1>Hello World!</h1>
     </body>
 </html>
